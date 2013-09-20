@@ -69,6 +69,7 @@ public class Singletons {
     public GpoNetClientInfo getClientInfo() {
         if (clientInfo == null) {
             clientInfo = new GpoNetClientInfo();
+            clientInfo.setHostname(getGpodderSettings().getApiHostname());
         }
         return clientInfo;
     }
