@@ -232,7 +232,10 @@ public class MainActivity extends FragmentActivity
     @Override
     public void onResume() {
         super.onResume();
-        EventBus.getDefault().register(this); /* TODO */
+        EventBus.getDefault().register(this,
+                EpisodeActionResultEvent.class,
+                PullFeedResultEvent.class,
+                PullSubscriptionResultEvent.class);
     }
 
     @Override
